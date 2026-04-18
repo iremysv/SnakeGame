@@ -3,31 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cyber Snake - Web Security Edition</title>
+    <title>Modern Snake</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <div class="cyber-background"></div>
+<body class="theme-nature">
+    <div class="background-decor"></div>
     
     <div class="container">
         <!-- Header / Scoreboard Panel -->
-        <header class="glass-panel header-panel">
+        <header class="panel header-panel">
             <div class="title-container">
-                <div class="glitch" data-text="CYBER SNAKE">CYBER SNAKE</div>
-                <div class="subtitle">System Override Initiated</div>
+                <h1 class="main-title">YILAN OYUNU</h1>
+                <div class="subtitle" id="themeName">Tema: Doğa Modu</div>
             </div>
             
             <div class="dashboard">
                 <div class="score-card">
-                    <span class="label">ERİŞİM (SCORE)</span>
-                    <span id="currentScore" class="value neon-text">0</span>
+                    <span class="label">SKOR</span>
+                    <span id="currentScore" class="value">0</span>
                 </div>
                 <div class="score-card">
-                    <span class="label">MAKS. ERİŞİM (HIGH)</span>
-                    <span id="highScore" class="value neon-text">0</span>
+                    <span class="label">REKOR</span>
+                    <span id="highScore" class="value">0</span>
                 </div>
             </div>
         </header>
@@ -37,26 +37,23 @@
             <canvas id="gameCanvas" width="600" height="600"></canvas>
             
             <!-- Game Over Overlay -->
-            <div id="gameOverScreen" class="overlay hidden glass-panel">
-                <h2 class="neon-red">BAĞLANTI KESİLDİ</h2>
-                <p>Güvenlik Duvarına takıldınız veya Kendinizle Çarpıştınız.</p>
-                <button id="restartBtn" class="cyber-btn">YENİDEN BAŞLAT [ENTER]</button>
+            <div id="gameOverScreen" class="overlay hidden panel">
+                <h2>OYUN BİTTİ</h2>
+                <p>Duvara veya kendinize çarptınız.</p>
+                <button id="restartBtn" class="game-btn">YENİDEN BAŞLAT</button>
             </div>
             
             <!-- Start Overlay -->
-            <div id="startScreen" class="overlay glass-panel">
-                <h2 class="neon-green">SİSTEME GİRİŞ YAP</h2>
-                <p>Veri paketlerini topla, güvenlik açığını sömür.</p>
+            <div id="startScreen" class="overlay panel">
+                <h2>OYUNA BAŞLA</h2>
+                <p>Elmaları topla, yılanı büyüt. 50 Puanda yeni tema açılır!</p>
                 <div class="controls-hint">
-                    Hareket: <span>Yön Tuşları</span> veya <span>W A S D</span>
+                    Hareket: Yön Tuşları veya W A S D
                 </div>
-                <button id="startBtn" class="cyber-btn">BAŞLAT [ENTER]</button>
+                <button id="startBtn" class="game-btn">BAŞLAT</button>
             </div>
         </main>
         
-        <footer class="footer-text">
-            Use arrow keys to break through the firewall.
-        </footer>
     </div>
 
     <script src="app.js"></script>

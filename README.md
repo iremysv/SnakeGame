@@ -1,6 +1,6 @@
 <div align="center">
-  <h1>🐍 Siber Yılan Oyunu (Cyber Snake) 🐍</h1>
-  <p><i>Siber güvenlik teması entegre edilmiş, karanlık Terminal hissiyatlı klasik Yılan oyunu.</i></p>
+  <h1>🐍 Modern Yılan Oyunu (Tematik) 🐍</h1>
+  <p><i>Yumuşak çizgilere, temiz bir arayüze ve skor temelli dinamik tema geçişlerine sahip gelişmiş bir Yılan oyunu.</i></p>
   
   ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
   ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
@@ -10,7 +10,7 @@
   
   <br>
   
-  ![Cyber Snake Gameplay](demo/demo.gif)
+  ![Snake Gameplay with Theme Transition](demo/demo.gif)
   
   <br>
 </div>
@@ -19,20 +19,18 @@
 
 ## 🎯 Proje Özellikleri
 
-- 🚀 **Oyun Motorları:** Standart kullanım için Python `turtle` modülü, web arayüzü için **HTML5 `<canvas>`** ve vanilla JavaScript kullanılarak eşzamanlı iki farklı versiyon üretilmiştir.
-- 💻 **Siber Konsept:** Koyu bir terminal hissiyatı uyandıracak siyah arka plan, neon yeşil (`#00FF00`) ve kritik açık rengi kırmızı kullanılarak tasarlandı. Yeni eklenen web arayüzünde "Glassmorphism" (cam görünümü) efektleri ile daha premium bir hava yakalanmıştır.
-- 📦 **Veri Toplama:** Oyunda Yılan yerine bir **"Veri Paketi"**, yem yerine ise sistemdeki bir **"Zafiyet"** teması işlenmektedir. Yem toplandıkça sistem ele geçirilir!
-- 📊 **Skor ve Kayıt Sistemi:** O anki ilerlemeyi gösteren **Erişim (Current Score)** ve kırılan rekoru gösteren **Maksimum Erişim (High Score)** olarak dinamik skor tablosu mevcuttur.
-- 🛡️ **Çarpışma Algılama (Collision Detection):**
-  - **Güvenlik Duvarı Çarpışması:** Ekran sınırlarına (Güvenlik Duvarı) ulaşıldığında bağlantı kesilir ve oyun başa döner.
-  - **Kuyruk Kontrolü (Self Collision):** Bağımsız yılan zincirlerinin yılanın kendi haline çarpmasıyla oyun sıfırlanır.
-- ⚡ **Optimizasyon:** `window.tracer(0)` fonksiyonu kullanılarak gereksiz ekran yenilemeleri kapatılmış, böylece FPS drop yaşanmayan akıcı bir oyun içi döngü yakalanmıştır.
+- 🌟 **Dinamik Tema Geçişi:** Oyun içerisinde skor **50**'ye ulaştığında arka plan, yılanın tasarımı ve toplanan nesneler tamamen yeni bir temaya (Doğa'dan Uzay'a) ani bir geçiş yapar.
+- 🎨 **Modern Görsellik:** Klasikleşmiş kırmızı/yeşil kare hatların dışına çıkıldı. Python modülünde ve Web modülünde yumuşatılmış dairesel hatlar kullanıldı. Web sürümünde yemler `🍎` (Elma) ve `⭐` (Yıldız) iconları olarak özel çizdirilir.
+- 🚀 **Oyun Motorları:** Proje iki koldan aynı anda geliştirilmiştir:
+  - Klasik yerel kullanım için **Python `turtle`**
+  - Tarayıcı üzerinden oynamak için **HTML5 `<canvas>`**
+- 📊 **Skor ve Kayıt Sistemi:** O anki ilerlemeyi gösteren "Skor" ve kırılan rekoru gösteren "Rekor" olarak dinamik bir yapı. Web sürümünde skorunuz tarayıcınızda hafızada (Local Storage) tutulur, oyunu kapatsanız bile silinmez.
 
 ---
 
 ## 🎮 Nasıl Oynanır?
 
-Projede hem yerel (Python) hem de tarayıcı tabanlı (Web) sürüm mevcuttur.
+Projede hem yerel (Python) hem de tarayıcı tabanlı (Web) sürüm mevcuttur. Dilediğinizi seçebilirsiniz.
 
 1. **Projeyi indirin:**
    ```bash
@@ -40,25 +38,26 @@ Projede hem yerel (Python) hem de tarayıcı tabanlı (Web) sürüm mevcuttur.
    cd SnakeGame
    ```
 
-2. **Web Versiyonunu Oynayın (Yeni & Tavsiye Edilen):**
-   Herhangi bir kurulum gerektirmez. Sadece klasördeki `index.html` dosyasını tarayıcınızda (Chrome, Safari, Firefox vs.) çift tıklayarak açın. Modern web arayüzünün tadını çıkarın!
+2. **Web Versiyonunu Oynayın (Pratik & Önerilen):**
+   Herhangi bir dil indirmeye veya komut koşmaya gerek yoktur. Klasördeki `index.html` dosyasına çift tıklayın ve tarayıcınızda açın. Yenilenen dairesel yılan ve tema değişimlerinin keyfini çıkarın!
 
 3. **Python Versiyonunu Oynayın:**
-   Yalnızca standart bir modül olan `turtle` kullanır.
+   Eğer cihazınızda Python3 kuruluysa, komut satırından çalıştırabilirsiniz.
    ```bash
    python3 main.py
    ```
    
-4. **Kontroller:**
-   - ⬆️ **Yukarı Ok:** Yukarı Yönlendir
-   - ⬇️ **Aşağı Ok:** Aşağı Yönlendir
-   - ⬅️ **Sol Ok:** Sola Yönlendir
-   - ➡️ **Sağ Ok:** Sağa Yönlendir
+4. **Oyun Kontrolleri:**
+   - ⬆️ **Yukarı Ok veya W**
+   - ⬇️ **Aşağı Ok veya S**
+   - ⬅️ **Sol Ok veya A**
+   - ➡️ **Sağ Ok veya D**
+   - ⌨️ **Enter:** Yeniden Başlat
 
 ---
 
-## 🔒 Telif ve Kullanım Hakları 
+## 🔒 Lisans ve Kullanım
 
-Bu projenin tüm kaynak kodları, metinleri, algoritmaları ve mimarisi **İrem Yasav** adına tescilli olup **All Rights Reserved** (Tüm Hakları Saklıdır) lisansıyla korunmaktadır. Projenin izinsiz çoğaltılması, kopyalanması, başka platformlarda kendi eseri gibi yayınlanması veya ticari/bireysel amaçlarla kullanılması kesinlikle yasaktır ve yasal işlem sebebidir. 
+Bu proje tescilli olup standart telif ve yeniden kullanım korumaları altındadır. Oynanmak, incelenmek ve keyif almak için tasarlanmıştır.
 
-Daha fazla detay için [LICENSE](LICENSE) ve [SECURITY.md](SECURITY.md) dosyalarını inceleyebilirsiniz.
+Detaylar için [LICENSE](LICENSE) dosyasına göz atabilirsiniz.
