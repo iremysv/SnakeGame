@@ -18,7 +18,11 @@ Bu proje, Python ve `turtle` kütüphanesi kullanılarak geliştirilmiş, Antigr
 Gerçek bir demo görüntüsü için:
 1. Oyunu oynarken Mac'inde **Cmd + Shift + 5** ile ekran kaydı al.
 2. Bu kaydı bir [GIF oluşturucuya](https://ezgif.com/) yükle.
-3. Oluşan `demo.gif` dosyasını ilgili proje klasörüne at.
-4. README'deki görsel kısmını şu şekilde güncelle: `![Cyber Snake Demo](demo.gif)`
+3. Oluşan `demo.gif` dosyasını `demo/` klasörüne at.
+4. README'deki görsel kısmını şu şekilde güncelle: `![Cyber Snake Demo](demo/demo.gif)`
 
-![Cyber Snake Demo](demo.gif)
+![Cyber Snake Demo](demo/demo.gif)
+
+## Telif ve Kullanım Hakları 🔒
+
+Bu projenin tüm kaynak kodları, metinleri, algoritmaları ve mimarisi **İrem Yasav (Antigravity Development)** adına tescilli olup `All Rights Reserved` (Tüm Hakları Saklıdır) lisansıyla korunmaktadır. Projenin izinsiz çoğaltılması, kopyalanması, başka platformlarda kendi eseri gibi yayınlanması veya ticari/bireysel amaçlarla kullanılması kesinlikle yasaktır ve yasal işlem sebebidir. Daha fazla detay için [LICENSE](LICENSE) ve [SECURITY.md](SECURITY.md) dosyalarını inceleyebilirsiniz.

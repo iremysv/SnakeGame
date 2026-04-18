@@ -1,0 +1,30 @@
+# Docker ve imaj içine girmeyecek dosyalar
+.git
+.gitignore
+.dockerignore
+.editorconfig
+.gitattributes
+.pre-commit-config.yaml
+Dockerfile
+README.md
+SECURITY.md
+LICENSE
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+venv
+.venv
+.env
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
