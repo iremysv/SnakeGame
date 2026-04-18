@@ -1,28 +1,64 @@
-# Siber Yılan Oyunu (Cyber Snake)
+<div align="center">
+  <h1>🐍 Siber Yılan Oyunu (Cyber Snake) 🐍</h1>
+  <p><i>Antigravity Development tarafından siber güvenlik teması entegre edilmiş, karanlık Terminal hissiyatlı klasik Yılan oyunu.</i></p>
+  
+  ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+  ![Turtle](https://img.shields.io/badge/Turtle-Graphic_Engine-000000?style=for-the-badge)
+  ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
+  
+  <br>
+  
+  <img src="demo/demo.gif" alt="Cyber Snake Gameplay" width="400" style="border: 2px solid #00FF00; border-radius: 10px;">
+  
+  <br>
+</div>
 
-Bu proje, Python ve `turtle` kütüphanesi kullanılarak geliştirilmiş, Antigravity tarafından siber güvenlik teması entegre edilmiş klasik bir yılan (Snake) oyunudur.
+---
 
-## Proje Özellikleri
+## 🎯 Proje Özellikleri
 
-- **Oyun Motoru:** Görüntü render ve olay döngüsü (event loop) yönetimi için Python `turtle` grafik modülünden faydalanılmıştır.
-- **Konsept ve Kullanıcı Arayüzü:** Oyun, koyu bir terminal hissiyatı uyandıracak siyah arka plan ve neon yeşil/kırmızı renk paleti kullanılarak tasarlanmıştır. Yılan "Veri Paketi", yem ise "Zafiyet" olarak betimlenmiştir.
-- **Skor ve Kayıt Sistemi:** Gerçek zamanlı bir puanlama yapısı mevcuttur. O anki ilerlemeyi "Erişim" (Current Score), en yüksek performansı ise "Maksimum Erişim" (High Score) olarak takip eden dinamik bir skor tablosu eklenmiştir.
-- **Çarpışma Algılama (Collision Detection):**
-  - **Güvenlik Duvarı Çarpışması:** X ve Y koordinatları kontrol edilerek ekranın sınırlarına ulaşıldığında bağlantıyı kesen (oyunu sıfırlayan) bariyer mekanizması aktiftir.
-  - **Kuyruk Kontrolü (Self Collision):** Bağımsız yılan segmentlerinin yılanın başı (head) ile olan mesafesi (distance) sürekli hesaplanarak kendine çarpma durumunda oyun sonlandırılmaktadır.
-- **Dinamik Segmentasyon:** Hedef veri (yem) ele geçirildiğinde skor 10 puan artar, hedefin koordinatları rastgele (random) yenilenir ve yılanın dizisine (Array/List) yeni bir vücut parçası eklenerek büyüme sağlanır.
-- **Oyun Döngüsü (Game Loop):** Performans optimizasyonu amacıyla `window.tracer(0)` fonksiyonu kullanılarak otomatik çizim kapatılmış, manuel state güncellemeleri (`window.update()`) ile akıcı bir ekran yenileme hızı (frame rate) elde edilmiştir.
+- 🚀 **Oyun Motoru:** Görüntü render ve olay döngüsü yönetimi için Python `turtle` modülünden faydalanılmıştır.
+- 💻 **Siber Konsept:** Koyu bir terminal hissiyatı uyandıracak siyah arka plan, neon yeşil (`#00FF00`) ve kritik açık rengi kırmızı kullanılarak tasarlandı.
+- 📦 **Veri Toplama:** Oyunda Yılan yerine bir **"Veri Paketi"**, yem yerine ise sistemdeki bir **"Zafiyet"** teması işlenmektedir. Yem toplandıkça sistem ele geçirilir!
+- 📊 **Skor ve Kayıt Sistemi:** O anki ilerlemeyi gösteren **Erişim (Current Score)** ve kırılan rekoru gösteren **Maksimum Erişim (High Score)** olarak dinamik skor tablosu mevcuttur.
+- 🛡️ **Çarpışma Algılama (Collision Detection):**
+  - **Güvenlik Duvarı Çarpışması:** Ekran sınırlarına (Güvenlik Duvarı) ulaşıldığında bağlantı kesilir ve oyun başa döner.
+  - **Kuyruk Kontrolü (Self Collision):** Bağımsız yılan zincirlerinin yılanın kendi haline çarpmasıyla oyun sıfırlanır.
+- ⚡ **Optimizasyon:** `window.tracer(0)` fonksiyonu kullanılarak gereksiz ekran yenilemeleri kapatılmış, böylece FPS drop yaşanmayan akıcı bir oyun içi döngü yakalanmıştır.
 
-## Demo
+---
 
-Gerçek bir demo görüntüsü için:
-1. Oyunu oynarken Mac'inde **Cmd + Shift + 5** ile ekran kaydı al.
-2. Bu kaydı bir [GIF oluşturucuya](https://ezgif.com/) yükle.
-3. Oluşan `demo.gif` dosyasını `demo/` klasörüne at.
-4. README'deki görsel kısmını şu şekilde güncelle: `![Cyber Snake Demo](demo/demo.gif)`
+## 🎮 Nasıl Oynanır?
 
-![Cyber Snake Demo](demo/demo.gif)
+Proje tamamen yerel bir Python betiği olarak çalışır. Aşağıdaki adımları takip ederek siber dünyaya anında giriş yapabilirsiniz.
 
-## Telif ve Kullanım Hakları 🔒
+1. **Projeyi indirin:**
+   ```bash
+   git clone <repo-url>
+   cd SnakeGame
+   ```
 
-Bu projenin tüm kaynak kodları, metinleri, algoritmaları ve mimarisi **İrem Yasav (Antigravity Development)** adına tescilli olup `All Rights Reserved` (Tüm Hakları Saklıdır) lisansıyla korunmaktadır. Projenin izinsiz çoğaltılması, kopyalanması, başka platformlarda kendi eseri gibi yayınlanması veya ticari/bireysel amaçlarla kullanılması kesinlikle yasaktır ve yasal işlem sebebidir. Daha fazla detay için [LICENSE](LICENSE) ve [SECURITY.md](SECURITY.md) dosyalarını inceleyebilirsiniz.
+2. **Oyunu başlatın:**
+   Oyun herhangi bir harici kütüphane kurulumu gerektirmez. Sadece Python'un standart bir modülü olan `turtle` modülünü kullanır.
+   ```bash
+   python3 main.py
+   ```
+   
+3. **Kontroller:**
+   - ⬆️ **Yukarı Ok:** Yukarı Yönlendir
+   - ⬇️ **Aşağı Ok:** Aşağı Yönlendir
+   - ⬅️ **Sol Ok:** Sola Yönlendir
+   - ➡️ **Sağ Ok:** Sağa Yönlendir
+
+---
+
+## 🔒 Telif ve Kullanım Hakları 
+
+Bu projenin tüm kaynak kodları, metinleri, algoritmaları ve mimarisi **İrem Yasav (Antigravity Development)** adına tescilli olup **All Rights Reserved** (Tüm Hakları Saklıdır) lisansıyla korunmaktadır. Projenin izinsiz çoğaltılması, kopyalanması, başka platformlarda kendi eseri gibi yayınlanması veya ticari/bireysel amaçlarla kullanılması kesinlikle yasaktır ve yasal işlem sebebidir. 
+
+Daha fazla detay için [LICENSE](LICENSE) ve [SECURITY.md](SECURITY.md) dosyalarını inceleyebilirsiniz.
+
+---
+<div align="center">
+  <sub>Code aesthetics and logic developed with ❤️ by İrem Yasav</sub>
+</div>
