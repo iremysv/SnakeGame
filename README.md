@@ -9,11 +9,15 @@
   ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
   
   <br>
-  
-  ![Snake Gameplay with Theme Transition](demo/demo.gif)
-  
-  <br>
 </div>
+
+---
+
+## 🎥 Oyunun Demosu
+
+Aşağıdaki videoda (GIF) yılanın dinamik doğa temasından, skor hedefi aşıldığında aniden uzay temasına nasıl geçtiğini görebilirsiniz:
+
+![Snake Gameplay](demo/demo.gif)
 
 ---
 
