@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Snake - Web Security Edition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cyber-background"></div>
+    
+    <div class="container">
+        <!-- Header / Scoreboard Panel -->
+        <header class="glass-panel header-panel">
+            <div class="title-container">
+                <div class="glitch" data-text="CYBER SNAKE">CYBER SNAKE</div>
+                <div class="subtitle">System Override Initiated</div>
+            </div>
+            
+            <div class="dashboard">
+                <div class="score-card">
+                    <span class="label">ERİŞİM (SCORE)</span>
+                    <span id="currentScore" class="value neon-text">0</span>
+                </div>
+                <div class="score-card">
+                    <span class="label">MAKS. ERİŞİM (HIGH)</span>
+                    <span id="highScore" class="value neon-text">0</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Game Area -->
+        <main class="game-wrapper">
+            <canvas id="gameCanvas" width="600" height="600"></canvas>
+            
+            <!-- Game Over Overlay -->
+            <div id="gameOverScreen" class="overlay hidden glass-panel">
+                <h2 class="neon-red">BAĞLANTI KESİLDİ</h2>
+                <p>Güvenlik Duvarına takıldınız veya Kendinizle Çarpıştınız.</p>
+                <button id="restartBtn" class="cyber-btn">YENİDEN BAŞLAT [ENTER]</button>
+            </div>
+            
+            <!-- Start Overlay -->
+            <div id="startScreen" class="overlay glass-panel">
+                <h2 class="neon-green">SİSTEME GİRİŞ YAP</h2>
+                <p>Veri paketlerini topla, güvenlik açığını sömür.</p>
+                <div class="controls-hint">
+                    Hareket: <span>Yön Tuşları</span> veya <span>W A S D</span>
+                </div>
+                <button id="startBtn" class="cyber-btn">BAŞLAT [ENTER]</button>
+            </div>
+        </main>
+        
+        <footer class="footer-text">
+            Use arrow keys to break through the firewall.
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
