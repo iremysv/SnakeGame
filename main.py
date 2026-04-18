@@ -26,6 +26,9 @@ food.color("red")  # Kritik açık sembolü (Kırmızı)
 food.penup()
 food.goto(0, 100)
 
+# Yılanın kuyruğu (Veri Zinciri)
+segments = []
+
 # Yılanın hareket fonksiyonları
 def go_up():
     if head.direction != "down":
@@ -76,6 +79,26 @@ while True:
         x = random.randint(-280, 280)
         y = random.randint(-280, 280)
         food.goto(x, y)
+
+        # Yeni parça ekle
+        new_segment = turtle.Turtle()
+        new_segment.speed(0)
+        new_segment.shape("square")
+        new_segment.color("#008000")  # Koyu neon yeşil
+        new_segment.penup()
+        segments.append(new_segment)
+
+    # Kuyruk parçalarının pozisyonlarını güncelle
+    for index in range(len(segments)-1, 0, -1):
+        x = segments[index-1].xcor()
+        y = segments[index-1].ycor()
+        segments[index].goto(x, y)
+
+    # İlk parçayı kafaya bağla
+    if len(segments) > 0:
+        x = head.xcor()
+        y = head.ycor()
+        segments[0].goto(x, y)
 
     move()
     time.sleep(0.1)
