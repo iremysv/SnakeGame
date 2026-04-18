@@ -1,6 +1,6 @@
 <div align="center">
   <h1>🐍 Siber Yılan Oyunu (Cyber Snake) 🐍</h1>
-  <p><i>Antigravity Development tarafından siber güvenlik teması entegre edilmiş, karanlık Terminal hissiyatlı klasik Yılan oyunu.</i></p>
+  <p><i>Siber güvenlik teması entegre edilmiş, karanlık Terminal hissiyatlı klasik Yılan oyunu.</i></p>
   
   ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
   ![Turtle](https://img.shields.io/badge/Turtle-Graphic_Engine-000000?style=for-the-badge)
@@ -8,7 +8,7 @@
   
   <br>
   
-  <img src="demo/demo.gif" alt="Cyber Snake Gameplay" width="400" style="border: 2px solid #00FF00; border-radius: 10px;">
+  ![Cyber Snake Gameplay](demo/demo.gif)
   
   <br>
 </div>
@@ -54,11 +54,6 @@ Proje tamamen yerel bir Python betiği olarak çalışır. Aşağıdaki adımlar
 
 ## 🔒 Telif ve Kullanım Hakları 
 
-Bu projenin tüm kaynak kodları, metinleri, algoritmaları ve mimarisi **İrem Yasav (Antigravity Development)** adına tescilli olup **All Rights Reserved** (Tüm Hakları Saklıdır) lisansıyla korunmaktadır. Projenin izinsiz çoğaltılması, kopyalanması, başka platformlarda kendi eseri gibi yayınlanması veya ticari/bireysel amaçlarla kullanılması kesinlikle yasaktır ve yasal işlem sebebidir. 
+Bu projenin tüm kaynak kodları, metinleri, algoritmaları ve mimarisi **İrem Yasav** adına tescilli olup **All Rights Reserved** (Tüm Hakları Saklıdır) lisansıyla korunmaktadır. Projenin izinsiz çoğaltılması, kopyalanması, başka platformlarda kendi eseri gibi yayınlanması veya ticari/bireysel amaçlarla kullanılması kesinlikle yasaktır ve yasal işlem sebebidir. 
 
 Daha fazla detay için [LICENSE](LICENSE) ve [SECURITY.md](SECURITY.md) dosyalarını inceleyebilirsiniz.
-
----
-<div align="center">
-  <sub>Code aesthetics and logic developed with ❤️ by İrem Yasav</sub>
-</div>
