@@ -29,6 +29,20 @@ food.goto(0, 100)
 # Yılanın kuyruğu (Veri Zinciri)
 segments = []
 
+# Skor Değişkenleri
+score = 0
+high_score = 0
+
+# Skor Tablosu
+pen = turtle.Turtle()
+pen.speed(0)
+pen.shape("square")
+pen.color("white")
+pen.penup()
+pen.hideturtle()
+pen.goto(0, 260)
+pen.write("Erişim: 0  Maksimum Erişim: 0", align="center", font=("Courier", 16, "normal"))
+
 # Yılanın hareket fonksiyonları
 def go_up():
     if head.direction != "down":
@@ -74,6 +88,20 @@ window.onkeypress(go_right, "Right")
 while True:
     window.update()
 
+    # Duvar (Güvenlik Duvarı) çarpışma kontrolü
+    if head.xcor() > 290 or head.xcor() < -290 or head.ycor() > 290 or head.ycor() < -290:
+        time.sleep(1)
+        head.goto(0, 0)
+        head.direction = "stop"
+
+        for segment in segments:
+            segment.goto(1000, 1000)
+        segments.clear()
+
+        score = 0
+        pen.clear()
+        pen.write("Erişim: {}  Maksimum Erişim: {}".format(score, high_score), align="center", font=("Courier", 16, "normal"))
+
     # Yem yeme durumu (Veri/Hedef ele geçirildiğinde)
     if head.distance(food) < 20:
         x = random.randint(-280, 280)
@@ -88,6 +116,13 @@ while True:
         new_segment.penup()
         segments.append(new_segment)
 
+        # Skoru artır
+        score += 10
+        if score > high_score:
+            high_score = score
+        pen.clear()
+        pen.write("Erişim: {}  Maksimum Erişim: {}".format(score, high_score), align="center", font=("Courier", 16, "normal"))
+
     # Kuyruk parçalarının pozisyonlarını güncelle
     for index in range(len(segments)-1, 0, -1):
         x = segments[index-1].xcor()
@@ -101,4 +136,20 @@ while True:
         segments[0].goto(x, y)
 
     move()
+
+    # Kuyruk (Kendine) çarpışma kontrolü
+    for segment in segments:
+        if segment.distance(head) < 20:
+            time.sleep(1)
+            head.goto(0, 0)
+            head.direction = "stop"
+
+            for segment_obj in segments:
+                segment_obj.goto(1000, 1000)
+            segments.clear()
+
+            score = 0
+            pen.clear()
+            pen.write("Erişim: {}  Maksimum Erişim: {}".format(score, high_score), align="center", font=("Courier", 16, "normal"))
+
     time.sleep(0.1)
