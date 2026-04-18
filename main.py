@@ -1,5 +1,6 @@
 import turtle
 import time
+import random
 
 # Oyun ekranı ayarları - Siber Güvenlik Teması
 window = turtle.Screen()
@@ -16,6 +17,14 @@ head.color("#00FF00")  # Neon yeşil
 head.penup()
 head.goto(0, 0)
 head.direction = "stop"
+
+# Yem (Zafiyet/Hedef Veri)
+food = turtle.Turtle()
+food.speed(0)
+food.shape("circle")
+food.color("red")  # Kritik açık sembolü (Kırmızı)
+food.penup()
+food.goto(0, 100)
 
 # Yılanın hareket fonksiyonları
 def go_up():
@@ -61,5 +70,12 @@ window.onkeypress(go_right, "Right")
 # Ana oyun döngüsü
 while True:
     window.update()
+
+    # Yem yeme durumu (Veri/Hedef ele geçirildiğinde)
+    if head.distance(food) < 20:
+        x = random.randint(-280, 280)
+        y = random.randint(-280, 280)
+        food.goto(x, y)
+
     move()
     time.sleep(0.1)
