@@ -15,9 +15,9 @@
 
 ## 🎥 Oyunun Demosu
 
-Aşağıdaki videoda (GIF) yılanın dinamik doğa temasından, skor hedefi aşıldığında aniden uzay temasına nasıl geçtiğini görebilirsiniz:
+Aşağıda oyunun aktif çalışır haldeki ekran görüntüsünü görebilirsiniz. Yuvarlak hatlı yeşil yılan ve 🍎 elma ile **Doğa Modu** teması aktif:
 
-![Snake Gameplay](demo/demo.gif)
+![Snake Gameplay](demo/gameplay.png)
 
 ---
 
